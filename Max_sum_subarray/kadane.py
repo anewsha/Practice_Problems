@@ -5,5 +5,5 @@ def maxsum(l):
     for num in l:
         curr_sum = max(0, curr_sum+num) #0 7 11 8
         max_sum = max(curr_sum, max_sum)#0 7 11 11
-    return max_sum)
+    return max_sum
 maxsum(l)
