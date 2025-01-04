@@ -3,7 +3,7 @@ class Solution:
         def bs(nums, target, left, right):
             if left>right:
                 return -1
-            m = (left+right)//2
+            m = (left+right)//2  #its left+right// 2 for a reason (in the last iteration this can cause problems)
             if nums[m]==target:
                 return m
             if nums[m]<target:
@@ -13,4 +13,4 @@ class Solution:
         
         return bs(nums,target,0,len(nums)-1)
 solution = Solution()
-print(solution.search([-1,0,3,5,9,12],9))
+print(solution.search([-1,0,3,5,9,12],4))

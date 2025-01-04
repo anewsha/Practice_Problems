@@ -11,15 +11,12 @@ def ifprime(m):
                 break
     return flag
 def prime_product(n):
-    l =[]
+  
     for i in range(n):
         if ifprime(i):
-            l.append(i)
-    
-    for i in range(len(l)):
-        for j in range(i,len(l)):
-            if(l[i]*l[j]==n):
-                return True
+            for j in range(i,n):
+                if(ifprime(j) and i * j==n):
+                    return True
     return False
 n = int(input())
 #print(ifprime(n))
